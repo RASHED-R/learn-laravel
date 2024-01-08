@@ -23,10 +23,10 @@ Route::get('/second-page/second-first', function () {
     return view('secondFirst');
 });
 // get value from user
-Route::get('/second-page/{id?}/comment/{comment?}', function (string $id = null, string $comment = null) {
+Route::get('/second-page/{id}/comment/{commentId}', function (string $id, string $comment) {
     if ($id) {
-        return "<h1>post id:" . $id . "</h1><h1>comment id:" . $comment . "</h1>";
+        return "<h1>post id:" . $id . "& comment id:" . $comment . "</h1>";
     } else {
         return "<h1>Id is not found</h1>";
     }
-});
+})->where('id', '[0-9]+')->whereAlpha('commentId');

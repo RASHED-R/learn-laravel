@@ -27,5 +27,8 @@ Route::get('about/our-team', function () {
 Route::get('/about-company', function () {
     return view('about');
 });
+Route::get('/tamplete1', function () {
+    return view('tamplete1');
+});
 
-Route::redirect('/about', '/about-company', 301);
+Route::redirect('/about', '/about-company', 301); //('previous path', 'new path', redirection code)

@@ -18,6 +18,10 @@ Route::get('about/our-team', function () {
     return view('team');
 })->name('team');
 
+Route::get('/main-page', function () {
+    return view('main');
+});
+
 // Route::get('about/about-us', function () {
 //     return view('about');
 // })->name('about');

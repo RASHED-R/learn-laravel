@@ -1,5 +1,5 @@
 @php
-    $fruits = ['one'=>'apple','two'=>'orange','three'=>'banana']
+    $fruits = []
 @endphp
 
 @include('layout.header', ['names'=>$fruits]) {{--pass value and key inside header, if the value is more then one we need to use an array--}}
